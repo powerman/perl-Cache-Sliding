@@ -1,4 +1,4 @@
-Cache-Sliding version 1.0.0
+Cache-Sliding version 1.0.1
 
 Implement caching object using sliding time-based expiration strategy.
 Only for EV-based applications.
