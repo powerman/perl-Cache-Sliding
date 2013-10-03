@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('1.0.1');    # update POD & Changes & README
+use version; our $VERSION = qv('1.0.2');    # update POD & Changes & README
 
 # update DEPENDENCIES in POD & Makefile.PL & README
 use Scalar::Util qw( weaken );
@@ -60,7 +60,7 @@ Cache::Sliding - Cache using sliding time-based expiration strategy
 
 =head1 VERSION
 
-This document describes Cache::Sliding version 1.0.1
+This document describes Cache::Sliding version 1.0.2
 
 
 =head1 SYNOPSIS
