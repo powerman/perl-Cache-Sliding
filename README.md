@@ -7,7 +7,7 @@ Cache::Sliding - Cache using sliding time-based expiration strategy
 
 # VERSION
 
-This document describes Cache::Sliding version v1.0.2
+This document describes Cache::Sliding version v2.0.0
 
 # SYNOPSIS
 

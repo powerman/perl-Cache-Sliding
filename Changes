@@ -1,6 +1,8 @@
 Revision history for Cache-Sliding
 
 {{$NEXT}}
+
+v2.0.0  2016-02-19 12:49:47 EET
 	- Switch to Dist::Milla.
 
 1.0.2   2013-10-03 16:28:57 EEST

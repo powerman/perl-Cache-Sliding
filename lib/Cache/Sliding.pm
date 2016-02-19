@@ -5,7 +5,7 @@ use strict;
 use utf8;
 use Carp;
 
-our $VERSION = 'v1.0.2';
+our $VERSION = 'v2.0.0';
 
 use Scalar::Util qw( weaken );
 use EV;
@@ -62,7 +62,7 @@ Cache::Sliding - Cache using sliding time-based expiration strategy
 
 =head1 VERSION
 
-This document describes Cache::Sliding version v1.0.2
+This document describes Cache::Sliding version v2.0.0
 
 
 =head1 SYNOPSIS
