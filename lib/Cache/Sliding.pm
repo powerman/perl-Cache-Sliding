@@ -88,18 +88,22 @@ because cache expiration will work only while you inside EV::loop.
 
 =head1 INTERFACE 
 
-=over
+=head2 new
 
-=item new( $expire_after )
+    $cache = Cache::Sliding->new( $expire_after );
 
 Create and return new cache object. Elements in this cache will expire
 between $expire_after seconds and 2*$expire_after seconds.
 
-=item set( $key, $value )
+=head2 set
+
+    $cache->set( $key, $value );
 
 Add new item into cache. Will replace existing item for that $key, if any.
 
-=item get( $key )
+=head2 get
+
+    $value = $cache->get( $key );
 
 Return value of cached item for $key. If there no cached item for that $key
 return nothing.
@@ -113,11 +117,11 @@ able to check is item was found in cache:
  $val = $cache->get( 'nosuch' );  # $val is undef
  @val = $cache->get( 'nosuch' );  # @val is ()
 
-=item del( $key )
+=head2 del
+
+    $cache->del( $key );
 
 Remove item for $key from cache, if any. Return nothing.
-
-=back
 
 
 =head1 SUPPORT
@@ -172,7 +176,7 @@ Alex Efros E<lt>powerman@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Alex Efros E<lt>powerman@cpan.orgE<gt>.
+This software is Copyright (c) 2009- by Alex Efros E<lt>powerman@cpan.orgE<gt>.
 
 This is free software, licensed under:
 

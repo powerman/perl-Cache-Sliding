@@ -30,32 +30,40 @@ because cache expiration will work only while you inside EV::loop.
 
 # INTERFACE 
 
-- new( $expire\_after )
+## new
 
-    Create and return new cache object. Elements in this cache will expire
-    between $expire\_after seconds and 2\*$expire\_after seconds.
+    $cache = Cache::Sliding->new( $expire_after );
 
-- set( $key, $value )
+Create and return new cache object. Elements in this cache will expire
+between $expire\_after seconds and 2\*$expire\_after seconds.
 
-    Add new item into cache. Will replace existing item for that $key, if any.
+## set
 
-- get( $key )
+    $cache->set( $key, $value );
 
-    Return value of cached item for $key. If there no cached item for that $key
-    return nothing.
+Add new item into cache. Will replace existing item for that $key, if any.
 
-    For example, if you may keep undefined values in cache and still wanna be
-    able to check is item was found in cache:
+## get
 
-        $cache->set( 'item 1', undef );
-        $val = $cache->get( 'item 1' );  # $val is undef
-        @val = $cache->get( 'item 1' );  # @val is (undef)
-        $val = $cache->get( 'nosuch' );  # $val is undef
-        @val = $cache->get( 'nosuch' );  # @val is ()
+    $value = $cache->get( $key );
 
-- del( $key )
+Return value of cached item for $key. If there no cached item for that $key
+return nothing.
 
-    Remove item for $key from cache, if any. Return nothing.
+For example, if you may keep undefined values in cache and still wanna be
+able to check is item was found in cache:
+
+    $cache->set( 'item 1', undef );
+    $val = $cache->get( 'item 1' );  # $val is undef
+    @val = $cache->get( 'item 1' );  # @val is (undef)
+    $val = $cache->get( 'nosuch' );  # $val is undef
+    @val = $cache->get( 'nosuch' );  # @val is ()
+
+## del
+
+    $cache->del( $key );
+
+Remove item for $key from cache, if any. Return nothing.
 
 # SUPPORT
 
@@ -103,7 +111,7 @@ Alex Efros &lt;powerman@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2009 by Alex Efros &lt;powerman@cpan.org>.
+This software is Copyright (c) 2009- by Alex Efros &lt;powerman@cpan.org>.
 
 This is free software, licensed under:
 

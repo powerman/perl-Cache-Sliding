@@ -1,6 +1,7 @@
 Revision history for Cache-Sliding
 
 {{$NEXT}}
+	- Reformat doc.
 
 v2.0.0  2016-02-19 12:49:47 EET
 	- Switch to Dist::Milla.
