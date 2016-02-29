@@ -8,7 +8,7 @@ on configure => sub {
 };
 
 on test => sub {
-    requires 'Test::Mock::Time';
+    requires 'Test::Mock::Time', 'v0.1.5';
     requires 'Test::More';
 };
 
